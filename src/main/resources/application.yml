@@ -25,7 +25,7 @@ spring:
     # Redis服务器连接端口
     port: 6379
     # Redis密码
-    password: password
+   # password: password
     # 连接超时时间（毫秒）
     timeout: 10000ms
     jedis:
@@ -74,7 +74,7 @@ jwt:
 # 阿里云短信服务配置
 aliSms:
   # 是否开启模拟调用，开启后，验证码均为 123456
-  mock: false
+  mock: true
   # 阿里云短信服务 key
   accessKeyId: ""
   # 阿里云短信服务 secret

@@ -30,7 +30,7 @@ public class PictureController {
         if (file.isEmpty()) {
             return CommonResult.validateFailed("上传图片为空！");
         }
-
+//todo 改为本地存储
         String url = qiniuComponent.uploadFile(file);
 
         if (!StringUtils.isEmpty(url)) {
