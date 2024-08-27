@@ -1,10 +1,12 @@
 package cn.yujian95.hospital.entity;
 
 import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class HospitalDoctor implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * 医生编号
      *
@@ -12,7 +14,13 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "医生编号")
     private Long id;
-
+    /*    *//**
+     * 登录账号 唯一
+     *
+     * @mbg.generated
+     *//*
+    @ApiModelProperty(value = "登录账号 唯一")
+    private String account;*/
     /**
      * 医生姓名
      *
@@ -20,7 +28,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "医生姓名")
     private String name;
-
     /**
      * 性别：1，男；2，女
      *
@@ -28,7 +35,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "性别：1，男；2，女")
     private Integer gender;
-
     /**
      * 医生职称
      *
@@ -36,7 +42,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "医生职称")
     private String jobTitle;
-
     /**
      * 医生专长
      *
@@ -44,7 +49,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "医生专长")
     private String specialty;
-
     /**
      * 所属专科
      *
@@ -52,7 +56,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "所属专科")
     private Long specialId;
-
     /**
      * 所属门诊
      *
@@ -60,7 +63,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "所属门诊")
     private Long outpatientId;
-
     /**
      * 创建时间
      *
@@ -68,7 +70,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "创建时间")
     private Date gmtCreate;
-
     /**
      * 更新时间
      *
@@ -76,8 +77,6 @@ public class HospitalDoctor implements Serializable {
      */
     @ApiModelProperty(value = "更新时间")
     private Date gmtModified;
-
-    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
@@ -151,6 +150,14 @@ public class HospitalDoctor implements Serializable {
         this.gmtModified = gmtModified;
     }
 
+/*    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }*/
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -158,6 +165,7 @@ public class HospitalDoctor implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
+//        sb.append(", account=").append(account);
         sb.append(", name=").append(name);
         sb.append(", gender=").append(gender);
         sb.append(", jobTitle=").append(jobTitle);

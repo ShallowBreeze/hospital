@@ -64,6 +64,16 @@ public class VisitPlanParam {
     private Integer time;
 
     /**
+     * 排班开始时间
+     */
+    @ApiModelProperty(value = "排班开始时间")
+    private String startTime;
+    /**
+     * 排班结束时间
+     */
+    @ApiModelProperty(value = "排班结束时间")
+    private String endTime;
+    /**
      * 出诊日期
      *
      * @mbg.generated

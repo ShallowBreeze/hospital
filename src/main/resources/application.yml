@@ -25,7 +25,7 @@ spring:
     # Redis服务器连接端口
     port: 6379
     # Redis密码
-   # password: password
+    # password: password
     # 连接超时时间（毫秒）
     timeout: 10000ms
     jedis:
@@ -42,6 +42,7 @@ spring:
 mybatis:
   # mybatis pageHelper 分页配置
   config-location: classpath:/config/SqlMapConfig.xml
+
 
 server:
   port: 8080
@@ -142,3 +143,7 @@ secure:
 wx:
   appId:
   appSecret:
+
+logging:
+  level:
+    cn.yujian95.hospital.mapper: debug

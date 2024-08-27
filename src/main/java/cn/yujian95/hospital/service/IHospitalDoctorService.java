@@ -39,6 +39,14 @@ public interface IHospitalDoctorService {
      */
     boolean count(Long id);
 
+    /*  *//**
+     * 是否存在医生信息
+     *
+     * @param account 医生编号
+     * @return 是否存在
+     *//*
+    boolean count(String account);*/
+
     /**
      * 获取医生信息
      *
@@ -49,6 +57,7 @@ public interface IHospitalDoctorService {
 
     /**
      * 获取医生名称
+     *
      * @param id 医生编号
      * @return 医生名称，空则，返回未知
      */

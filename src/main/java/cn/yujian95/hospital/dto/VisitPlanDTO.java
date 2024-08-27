@@ -32,4 +32,5 @@ public class VisitPlanDTO extends VisitPlan {
 
     @ApiModelProperty(value = "医院名称")
     private String hospitalName;
+
 }

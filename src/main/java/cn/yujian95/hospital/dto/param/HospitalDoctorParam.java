@@ -15,7 +15,13 @@ import java.io.Serializable;
 public class HospitalDoctorParam implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    /**
+     * 医生姓名
+     *
+     * @mbg.generated
+     */
+    @ApiModelProperty(value = "医生账号")
+    private String account;
     /**
      * 医生姓名
      *

@@ -74,9 +74,9 @@ public class VisitPlanController {
             return CommonResult.validateFailed("不存在，该诊室编号！");
         }
 
-        if (param.getTime() > 2 || param.getTime() < 1) {
+/*        if (param.getTime() > 2 || param.getTime() < 1) {
             return CommonResult.validateFailed("不存在，该出诊时间段（1：上午，2：下午）！");
-        }
+        }*/
 
         if (planService.insertAll(param)) {
             return CommonResult.success();

@@ -4,7 +4,6 @@ import cn.yujian95.hospital.common.api.CommonPage;
 import cn.yujian95.hospital.common.api.CommonResult;
 import cn.yujian95.hospital.dto.HospitalDoctorDTO;
 import cn.yujian95.hospital.dto.param.HospitalDoctorParam;
-import cn.yujian95.hospital.entity.HospitalDoctor;
 import cn.yujian95.hospital.service.IHospitalDoctorService;
 import cn.yujian95.hospital.service.IHospitalOutpatientService;
 import cn.yujian95.hospital.service.IHospitalSpecialService;
@@ -40,7 +39,7 @@ public class HospitalDoctorController {
     @Resource
     private IHospitalDoctorService doctorService;
 
-    @ApiOperation(value = "添加医生信息", notes = "传入 医生信息参数（姓名，性别，职称，专长，所属专科，所属门诊）")
+    @ApiOperation(value = "添加医生信息", notes = "传入 医生信息参数（账号，姓名，性别，职称，专长，所属专科，所属门诊）")
     @RequestMapping(value = "/doctor", method = RequestMethod.POST)
     public CommonResult insertDoctor(@RequestBody HospitalDoctorParam param) {
 

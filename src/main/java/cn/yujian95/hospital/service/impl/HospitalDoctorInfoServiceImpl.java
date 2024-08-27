@@ -88,6 +88,22 @@ public class HospitalDoctorInfoServiceImpl implements IHospitalDoctorService {
         return doctorInfoMapper.countByExample(example) > 0;
     }
 
+    /*    *//**
+     * 是否存在医生信息
+     *
+     * @param account 医生编号
+     * @return 是否存在
+     *//*
+    @Override
+    public boolean count(String account) {
+        HospitalDoctorExample example = new HospitalDoctorExample();
+
+        example.createCriteria()
+                .andAccountEqualTo(account);
+
+        return doctorInfoMapper.countByExample(example) > 0;
+    }*/
+
     /**
      * 获取转换后的对象信息
      *

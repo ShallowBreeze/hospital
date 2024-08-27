@@ -1,10 +1,12 @@
 package cn.yujian95.hospital.entity;
 
 import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class VisitPlan implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * 出诊编号
      *
@@ -12,7 +14,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "出诊编号")
     private Long id;
-
     /**
      * 医院编号
      *
@@ -20,7 +21,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "医院编号")
     private Long hospitalId;
-
     /**
      * 专科编号
      *
@@ -28,7 +28,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "专科编号")
     private Long specialId;
-
     /**
      * 门诊编号
      *
@@ -36,7 +35,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "门诊编号")
     private Long outpatientId;
-
     /**
      * 诊室编号
      *
@@ -44,7 +42,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "诊室编号")
     private Long clinicId;
-
     /**
      * 医生编号
      *
@@ -52,7 +49,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "医生编号")
     private Long doctorId;
-
     /**
      * 时间段 1：上午，2：下午
      *
@@ -60,7 +56,16 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "时间段 1：上午，2：下午")
     private Integer time;
-
+    /**
+     * 排班开始时间
+     */
+    @ApiModelProperty(value = "排班开始时间")
+    private String startTime;
+    /**
+     * 排班结束时间
+     */
+    @ApiModelProperty(value = "排班结束时间")
+    private String endTime;
     /**
      * 出诊日期
      *
@@ -68,7 +73,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "出诊日期")
     private Date day;
-
     /**
      * 创建时间
      *
@@ -76,7 +80,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "创建时间")
     private Date gmtCreate;
-
     /**
      * 更新时间
      *
@@ -84,8 +87,6 @@ public class VisitPlan implements Serializable {
      */
     @ApiModelProperty(value = "更新时间")
     private Date gmtModified;
-
-    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
@@ -167,6 +168,22 @@ public class VisitPlan implements Serializable {
         this.gmtModified = gmtModified;
     }
 
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -181,6 +198,8 @@ public class VisitPlan implements Serializable {
         sb.append(", doctorId=").append(doctorId);
         sb.append(", time=").append(time);
         sb.append(", day=").append(day);
+        sb.append(", startTime=").append(startTime);
+        sb.append(", EndTime=").append(endTime);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
         sb.append(", serialVersionUID=").append(serialVersionUID);
